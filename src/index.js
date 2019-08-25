@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Counter from './Counter'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
@@ -31,8 +30,6 @@ function reducer(state = initialState, action) {
 const store = createStore(reducer);
 // store.dispatch({ type: "INCREMENT"})
 // store.dispatch({ type: "DECREMENT"})
-
-// ReactDOM.render(<App />, document.getElementById("root"));
 
 ReactDOM.render(
     <Provider store={store}>

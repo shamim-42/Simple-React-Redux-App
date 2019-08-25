@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './App.css';
-import Counter from './Counter'
 import { connect } from 'react-redux'
 
 class App extends Component {
@@ -14,7 +13,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div style={{ margin: '400px auto' }}>
+      <div style={{ margin: '200px auto' }}>
         <button onClick={this.decrement} style={{ mouse: 'pointer' }}>-</button>
         <span>{this.props.count}</span>
         <button onClick={this.increment}>+</button>
