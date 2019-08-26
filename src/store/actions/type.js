@@ -1,0 +1,4 @@
+export const INCREMENT = "INCREMENT";
+export const DECREMENT = "DECREMENT"
+export const INCREMENT_PRICE = "INCREMENT_PRICE"
+export const DECREMENT_PRICE = "DECREMENT_PRICE"

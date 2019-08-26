@@ -1,27 +1,24 @@
 import React, {Component} from 'react';
 import './App.css';
-import { connect } from 'react-redux'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
+import Home from './pages/Home';
+import Company from './pages/Company';
+import Product from './pages/Product';
 class App extends Component {
-
-  increment = () => {
-    this.props.dispatch({type: "INCREMENT"});
-  }
-
-  decrement = () => {
-    this.props.dispatch({type: "DECREMENT"});
-  }
   render() {
     return (
-      <div style={{ margin: '200px auto' }}>
-        <button onClick={this.decrement} style={{ mouse: 'pointer' }}>-</button>
-        <span>{this.props.count}</span>
-        <button onClick={this.increment}>+</button>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/company" exact component={Company} />
+              <Route path="/product" exact component={Product} />
+            </Switch>
+        </div>
+      </BrowserRouter>
     )
   }
 }
-const mapStateToProps = (state) => ({
-  count: state.count,
-})
-export default connect(mapStateToProps)(App);
+export default App;
+
